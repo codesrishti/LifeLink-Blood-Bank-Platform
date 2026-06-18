@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme {
+  /* LifeLink Core Color Palette */
+  --color-primary: #af101a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d32f2f;
+  --color-on-primary-container: #fff2f0;
+  --color-primary-fixed: #ffdad6;
+  --color-primary-fixed-dim: #ffb3ac;
+  --color-on-primary-fixed: #410003;
+  --color-on-primary-fixed-variant: #930010;
+  
+  --color-secondary: #6b5a60;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #f4dce4;
+  --color-on-secondary-container: #716066;
+  --color-secondary-fixed: #f4dce4;
+  --color-secondary-fixed-dim: #d7c1c8;
+  --color-on-secondary-fixed: #25181e;
+  --color-on-secondary-fixed-variant: #524249;
+
+  --color-tertiary: #0058a2;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #0770cc;
+  --color-on-tertiary-container: #f0f4ff;
+  --color-tertiary-fixed: #d4e3ff;
+  --color-tertiary-fixed-dim: #a5c8ff;
+  --color-on-tertiary-fixed: #001c3a;
+  --color-on-tertiary-fixed-variant: #004786;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-background: #f7f9ff;
+  --color-on-background: #181c20;
+
+  --color-surface: #f7f9ff;
+  --color-on-surface: #181c20;
+  --color-surface-dim: #d7dadf;
+  --color-surface-bright: #f7f9ff;
+  --color-surface-variant: #e0e3e8;
+  --color-on-surface-variant: #5b403d;
+  --color-surface-tint: #ba1a20;
+
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f1f4f9;
+  --color-surface-container: #ebeef3;
+  --color-surface-container-high: #e5e8ee;
+  --color-surface-container-highest: #e0e3e8;
+
+  --color-outline: #8f6f6c;
+  --color-outline-variant: #e4beba;
+
+  --color-inverse-surface: #2d3135;
+  --color-inverse-on-surface: #eef1f6;
+  --color-inverse-primary: #ffb3ac;
+
+  /* Border Radius */
+  --border-radius-DEFAULT: 0.25rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 0.75rem;
+  --border-radius-2xl: 1rem;
+  --border-radius-3xl: 1.5rem;
+  --border-radius-full: 9999px;
+
+  /* Spacing */
+  --spacing-margin-desktop: 64px;
+  --spacing-container-max: 1280px;
+  --spacing-gutter: 24px;
+  --spacing-unit: 8px;
+  --spacing-margin-mobile: 20px;
+  --width-container-max: 1280px;
+
+  /* Font Families */
+  --font-sans: "Public Sans", system-ui, -apple-system, sans-serif;
+  --font-headline-xl: "Public Sans", sans-serif;
+  --font-headline-lg: "Public Sans", sans-serif;
+  --font-headline-md: "Public Sans", sans-serif;
+  --font-body-lg: "Public Sans", sans-serif;
+  --font-body-md: "Public Sans", sans-serif;
+  --font-label-md: "Public Sans", sans-serif;
+  --font-label-sm: "Public Sans", sans-serif;
+
+  /* Typography Styles (Custom Mappings) */
+  --text-headline-xl: 48px;
+  --text-headline-lg: 32px;
+  --text-headline-lg-mobile: 28px;
+  --text-headline-md: 24px;
+  --text-body-lg: 18px;
+  --text-body-md: 16px;
+  --text-label-md: 14px;
+  --text-label-sm: 12px;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+}
+
+/* Material Symbols Outlined Custom Configuration */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Hero Section Overlay Gradient */
+.hero-gradient {
+  background: linear-gradient(rgba(24, 28, 32, 0.6), rgba(24, 28, 32, 0.4));
+}
+
+/* Custom Soft Shadow Systems (Medical Minimalist Style) */
+.medical-soft-shadow {
+  box-shadow: 0px 4px 12px rgba(33, 37, 41, 0.05);
+}
+
+.medical-soft-shadow-hover {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.medical-soft-shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 24px rgba(33, 37, 41, 0.08);
+}
+
+/* Card Hover Lift Animations */
+.card-hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 32px rgba(33, 37, 41, 0.08);
+}
+
+/* Glassmorphism Accents */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Proximity Map Simulated Grid Overlay */
+.map-container {
+  background-image: radial-gradient(circle at 2px 2px, #e5e8ee 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f4f9;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e0e3e8;
+  border-radius: 10px;
+}
